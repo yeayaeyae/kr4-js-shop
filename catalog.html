@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Каталог — TechStore</title>
+    <meta
+        name="description"
+        content="Каталог электроники TechStore: смартфоны, ноутбуки и наушники."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">Перейти к содержимому</a>
+
+<header class="header">
+    <div class="container header__inner">
+
+        <a class="logo" href="index.html">
+            TechStore
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Меню</button>
+        <nav class="nav" id="primary-nav" aria-label="Основная навигация">
+            <a class="nav__link" href="index.html">
+                Главная
+            </a>
+
+            <a class="nav__link nav__link--active" href="catalog.html">
+                Каталог
+            </a>
+
+            <a class="nav__link" href="product.html">
+                Товар
+            </a>
+
+            <a class="nav__link" href="cart.html">Корзина <span id="cart-count">0</span></a>
+            <a class="nav__link" href="order.html">
+                Заказать
+            </a>
+
+            <a class="nav__link" href="contacts.html">
+                Контакты
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+    <section class="page-hero">
+        <div class="container">
+
+            <p class="hero__subtitle">
+                TechStore
+            </p>
+
+            <h1 class="page-hero__title">
+                Каталог товаров
+            </h1>
+
+            <p class="page-hero__description">
+                Выберите подходящую электронику для работы,
+                учёбы и отдыха.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="catalog">
+        <div class="container">
+
+            <div class="catalog__layout catalog__layout--interactive">
+
+
+                <div class="catalog__content">
+
+                    <div class="catalog__header">
+
+                        <h2 class="section-title section-title--left">
+                            Товары
+                        </h2>
+
+                    </div>
+
+
+                    <section class="catalog-controls" aria-label="Поиск и сортировка товаров">
+                      <label for="product-search">Поиск по названию</label>
+                      <input id="product-search" type="search" placeholder="Например, смартфон" autocomplete="off">
+                      <label for="product-category">Категория</label>
+                      <select id="product-category"><option value="all">Все категории</option><option>Смартфоны</option><option>Ноутбуки</option><option>Наушники</option></select>
+                      <label for="product-sort">Сортировка</label>
+                      <select id="product-sort"><option value="default">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="title">По названию</option></select>
+                    </section>
+                    <p id="catalog-status" role="status" aria-live="polite"></p>
+                    <div class="products__grid" id="products-grid" aria-live="polite">
+
+                        <article class="product-card">
+
+                            <div class="product-card__image"><img src="images/phone-480.svg" srcset="images/phone-480.svg 480w, images/phone-960.svg 960w" sizes="(max-width: 600px) 90vw, (max-width: 1000px) 42vw, 340px" alt="Смартфон" loading="lazy" width="480" height="320"></div>
+
+                            <div class="product-card__content">
+
+                                <p class="product-card__category">
+                                    Смартфоны
+                                </p>
+
+                                <h3 class="product-card__title">
+                                    Смартфон Pro X
+                                </h3>
+
+                                <p class="product-card__description">
+                                    Современный смартфон для работы,
+                                    общения и развлечений.
+                                </p>
+
+                                <p class="product-card__price">
+                                    49 990 ₽
+                                </p>
+
+                                <a
+                                    class="button button--secondary"
+                                    href="product.html?product=phone-pro"
+                                >
+                                    Подробнее
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-card__image"><img src="images/phone-480.svg" srcset="images/phone-480.svg 480w, images/phone-960.svg 960w" sizes="(max-width: 600px) 90vw, (max-width: 1000px) 42vw, 340px" alt="Смартфон" loading="lazy" width="480" height="320"></div>
+
+                            <div class="product-card__content">
+
+                                <p class="product-card__category">
+                                    Смартфоны
+                                </p>
+
+                                <h3 class="product-card__title">
+                                    Смартфон Lite
+                                </h3>
+
+                                <p class="product-card__description">
+                                    Практичный смартфон для повседневных
+                                    задач.
+                                </p>
+
+                                <p class="product-card__price">
+                                    29 990 ₽
+                                </p>
+
+                                <a
+                                    class="button button--secondary"
+                                    href="product.html?product=phone-lite"
+                                >
+                                    Подробнее
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-card__image"><img src="images/laptop-480.svg" srcset="images/laptop-480.svg 480w, images/laptop-960.svg 960w" sizes="(max-width: 600px) 90vw, (max-width: 1000px) 42vw, 340px" alt="Ноутбук" loading="lazy" width="480" height="320"></div>
+
+                            <div class="product-card__content">
+
+                                <p class="product-card__category">
+                                    Ноутбуки
+                                </p>
+
+                                <h3 class="product-card__title">
+                                    Ноутбук Air 15
+                                </h3>
+
+                                <p class="product-card__description">
+                                    Лёгкий ноутбук для учёбы,
+                                    работы и повседневных задач.
+                                </p>
+
+                                <p class="product-card__price">
+                                    79 990 ₽
+                                </p>
+
+                                <a
+                                    class="button button--secondary"
+                                    href="product.html?product=laptop-air"
+                                >
+                                    Подробнее
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-card__image"><img src="images/laptop-480.svg" srcset="images/laptop-480.svg 480w, images/laptop-960.svg 960w" sizes="(max-width: 600px) 90vw, (max-width: 1000px) 42vw, 340px" alt="Ноутбук" loading="lazy" width="480" height="320"></div>
+
+                            <div class="product-card__content">
+
+                                <p class="product-card__category">
+                                    Ноутбуки
+                                </p>
+
+                                <h3 class="product-card__title">
+                                    Notebook Pro 16
+                                </h3>
+
+                                <p class="product-card__description">
+                                    Производительный ноутбук
+                                    для работы и творчества.
+                                </p>
+
+                                <p class="product-card__price">
+                                    109 990 ₽
+                                </p>
+
+                                <a
+                                    class="button button--secondary"
+                                    href="product.html?product=laptop-pro"
+                                >
+                                    Подробнее
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-card__image"><img src="images/audio-480.svg" srcset="images/audio-480.svg 480w, images/audio-960.svg 960w" sizes="(max-width: 600px) 90vw, (max-width: 1000px) 42vw, 340px" alt="Наушники" loading="lazy" width="480" height="320"></div>
+
+                            <div class="product-card__content">
+
+                                <p class="product-card__category">
+                                    Наушники
+                                </p>
+
+                                <h3 class="product-card__title">
+                                    Sound Pro
+                                </h3>
+
+                                <p class="product-card__description">
+                                    Беспроводные наушники
+                                    с качественным звуком.
+                                </p>
+
+                                <p class="product-card__price">
+                                    12 990 ₽
+                                </p>
+
+                                <a
+                                    class="button button--secondary"
+                                    href="product.html?product=sound-pro"
+                                >
+                                    Подробнее
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="product-card">
+
+                            <div class="product-card__image"><img src="images/audio-480.svg" srcset="images/audio-480.svg 480w, images/audio-960.svg 960w" sizes="(max-width: 600px) 90vw, (max-width: 1000px) 42vw, 340px" alt="Наушники" loading="lazy" width="480" height="320"></div>
+
+                            <div class="product-card__content">
+
+                                <p class="product-card__category">
+                                    Наушники
+                                </p>
+
+                                <h3 class="product-card__title">
+                                    Sound Mini
+                                </h3>
+
+                                <p class="product-card__description">
+                                    Компактные беспроводные
+                                    наушники на каждый день.
+                                </p>
+
+                                <p class="product-card__price">
+                                    7 990 ₽
+                                </p>
+
+                                <a
+                                    class="button button--secondary"
+                                    href="product.html?product=sound-mini"
+                                >
+                                    Подробнее
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="container footer__inner">
+
+        <p class="footer__copyright">
+            © 2026 TechStore
+        </p>
+
+        <a class="footer__link" href="#">
+            Наверх
+        </a>
+
+    </div>
+</footer>
+
+
+<script src="js/data.js"></script><script src="js/main.js"></script><script src="js/validation.js"></script>
+<script src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+/* Адаптивность КР №3: базовые правила проекта сохранены в style.css. */
+:root { --tap-size: 44px; }
+img, picture { max-width: 100%; }
+img { height: auto; }
+.skip-link { position: absolute; z-index: 1000; left: 12px; top: -60px; padding: 10px 16px; background: #fff; color: #111827; border: 2px solid #1d4ed8; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+.nav-toggle { display: none; min-height: var(--tap-size); padding: 0 16px; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-text); background: #fff; font: inherit; font-weight: 700; }
+.product-card__image img, .product__image img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; }
+.product-card__image { padding: 0; overflow: hidden; }
+.product-card { min-width: 0; }
+.catalog__layout, .contacts__layout, .product__layout { min-width: 0; }
+.table-wrapper { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.characteristics__table { min-width: 34rem; }
+.form__input, .form__textarea, select, button { max-width: 100%; }
+.form__input, .form__textarea, select { width: 100%; }
+.product-card__title, .product-card__description, .footer__link { overflow-wrap: anywhere; }
+@media (max-width: 900px) { .header__inner { position: relative; flex-wrap: wrap; gap: 10px 18px; padding-block: 12px; } .nav-toggle { display: inline-flex; align-items: center; justify-content: center; margin-left: auto; } .nav { display: none; flex: 1 0 100%; flex-wrap: wrap; gap: 4px 18px; padding: 8px 0; } .nav.is-open { display: flex; } .nav__link { display: inline-flex; align-items: center; min-height: var(--tap-size); } .catalog__layout { grid-template-columns: 1fr; } .catalog-filter { position: static; } .product__layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; } .contacts__layout { grid-template-columns: 1fr; gap: 28px; } .hero { padding-block: 64px; } }
+@media (max-width: 600px) { .container { width: min(100% - 28px, var(--container-width)); } .header__inner { min-height: 64px; } .nav { flex-direction: column; align-items: stretch; gap: 0; } .nav__link { width: 100%; padding: 7px 0; } .hero { padding: 48px 0; } .hero__title { font-size: clamp(2rem, 9vw, 2.7rem); line-height: 1.12; } .page-hero { padding: 42px 0; } .products__grid { grid-template-columns: 1fr; gap: 18px; } .product__layout { grid-template-columns: 1fr; } .product-card__image { aspect-ratio: 3 / 2; } .catalog__header { align-items: flex-start; flex-direction: column; gap: 8px; } .catalog-filter { padding: 20px; } .form__group { margin-bottom: 18px; } .contacts__form-wrapper { padding: 20px; } .cta__content { align-items: flex-start; } .cta .button { width: 100%; justify-content: center; } .footer__inner { flex-wrap: wrap; gap: 8px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
